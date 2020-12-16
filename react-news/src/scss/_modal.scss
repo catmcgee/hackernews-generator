@@ -1,0 +1,82 @@
+/* Modal
+====================================== */
+
+.modal-open {
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal-form {
+    display: inline-block;
+
+    input {
+        width: 100%;
+
+        &:last-of-type {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &-error {
+        margin-top: $small;
+    }
+}
+
+.modal-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: auto;
+    padding: $small $medium $medium $medium;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: 0 0 10px rgba(#000, 0.2);
+
+    h1 {
+        margin: 0 0 1rem;
+    }
+}
+
+.modal-overlay {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.2);
+    cursor: default;
+}
+
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: transparent;
+    transition: background 150ms;
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        vertical-align: middle;
+        width: 15px;
+        height: 15px;
+        fill: $dark-gray;
+    }
+
+    &:hover {
+        background: rgba(#000, 0.05);
+    }
+}
+
+.input-error {
+    border-color: rgba($error, 0.4) !important;
+}

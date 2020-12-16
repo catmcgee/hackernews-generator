@@ -1,0 +1,26 @@
+/* Single Post
+====================================== */
+
+// .comments {}
+
+.comment {
+    // animation: slide-in 0.5s;
+    margin: $small 0;
+    background: #fff;
+    
+    & + & {
+        margin-top: $small;
+    }
+
+    &-form {
+        margin-top: $medium;
+    }
+
+    &-input {
+        margin: $small 0;
+    }
+
+    &-error {
+        margin-top: $small;
+    }
+}
